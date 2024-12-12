@@ -27,7 +27,7 @@ export const TodoList = () => {
                         placeholder="What needs to be done ?"/>
                 </li>
                 {tareas.map((tarea, indiceTarea) => (
-                    <li key={indiceTarea} className="list-group-item">
+                    <li key={indiceTarea} className="list-group-item d-flex justify-content-between">
                         {tarea} <button type="button" className="btn btn-outline-danger" onClick={() => setTareas(tareas.filter((tarea, indiceTareaActual) => indiceTarea != indiceTareaActual))}><i className="fa-solid fa-trash-can"></i></button>
                     </li>
                 ))}
